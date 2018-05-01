@@ -1,0 +1,383 @@
+/*
+https://next.json-generator.com/EkJqThba4
+[
+  {
+    'repeat(5, 10)': {
+      _id: '{{objectId()}}',
+      firstName: '{{firstName()}}',
+      lastName: '{{surname()}}',
+      company: '{{company().toUpperCase()}}',
+      email() {
+        return `${this.firstName}.${this.lastName}@${this.company}.com`.toLowerCase();
+      },
+      age: '{{integer(20, 40)}}',
+      isActive: '{{bool()}}',
+      balance: '{{floating(1000, 4000, 2)}}',
+      phone: '+1 {{phone()}}',
+      friends: [
+        {
+          'repeat(3)': {
+            firstName: '{{firstName()}}',
+      lastName: '{{surname()}}',
+      company: '{{company().toUpperCase()}}',
+      email() {
+        return `${this.firstName}.${this.lastName}@${this.company}.com`.toLowerCase();
+      },
+      age: '{{integer(20, 40)}}',
+      isActive: '{{bool()}}',
+      balance: '{{floating(1000, 4000, 2)}}',
+      phone: '+1 {{phone()}}'
+          }
+        }
+      ]
+    }
+  }
+]
+
+*/
+[
+	{
+		"id": "5ae8d10786c379c7dfb94c58",
+		"firstName": "Julianne",
+		"lastName": "Adams",
+		"company": "SIGNIDYNE",
+		"email": "julianne.adams@signidyne.com",
+		"age": 37,
+		"isActive": true,
+		"balance": "1133.36",
+		"phone": "+1 (830) 477-3286",
+		"friends": [
+			{
+				"firstName": "Conley",
+				"lastName": "Burris",
+				"company": "EXOVENT",
+				"email": "conley.burris@exovent.com",
+				"age": 28,
+				"isActive": false,
+				"balance": "1711.52",
+				"phone": "+1 (896) 594-3576"
+			},
+			{
+				"firstName": "Meyers",
+				"lastName": "David",
+				"company": "HELIXO",
+				"email": "meyers.david@helixo.com",
+				"age": 22,
+				"isActive": true,
+				"balance": "1321.87",
+				"phone": "+1 (804) 445-2517"
+			},
+			{
+				"firstName": "Schmidt",
+				"lastName": "Garrison",
+				"company": "ORBOID",
+				"email": "schmidt.garrison@orboid.com",
+				"age": 22,
+				"isActive": false,
+				"balance": "2812.11",
+				"phone": "+1 (914) 419-3834"
+			}
+		]
+	},
+	{
+		"id": "5ae8d107813ca7edc9b2a516",
+		"firstName": "Barry",
+		"lastName": "Scott",
+		"company": "LOVEPAD",
+		"email": "barry.scott@lovepad.com",
+		"age": 20,
+		"isActive": false,
+		"balance": "1517.75",
+		"phone": "+1 (997) 553-3575",
+		"friends": [
+			{
+				"firstName": "Decker",
+				"lastName": "Pope",
+				"company": "JOVIOLD",
+				"email": "decker.pope@joviold.com",
+				"age": 24,
+				"isActive": true,
+				"balance": "1855.31",
+				"phone": "+1 (939) 487-3701"
+			},
+			{
+				"firstName": "Cassandra",
+				"lastName": "Franks",
+				"company": "TINGLES",
+				"email": "cassandra.franks@tingles.com",
+				"age": 38,
+				"isActive": false,
+				"balance": "1708.56",
+				"phone": "+1 (913) 523-2674"
+			},
+			{
+				"firstName": "Kelsey",
+				"lastName": "Spencer",
+				"company": "ERSUM",
+				"email": "kelsey.spencer@ersum.com",
+				"age": 34,
+				"isActive": true,
+				"balance": "2907.94",
+				"phone": "+1 (831) 540-3703"
+			}
+		]
+	},
+	{
+		"id": "5ae8d107c79010863d123d41",
+		"firstName": "Kelli",
+		"lastName": "House",
+		"company": "SNORUS",
+		"email": "kelli.house@snorus.com",
+		"age": 24,
+		"isActive": false,
+		"balance": "1879.55",
+		"phone": "+1 (984) 437-2623",
+		"friends": [
+			{
+				"firstName": "Pittman",
+				"lastName": "Wooten",
+				"company": "MOREGANIC",
+				"email": "pittman.wooten@moreganic.com",
+				"age": 33,
+				"isActive": true,
+				"balance": "2510.55",
+				"phone": "+1 (845) 587-3532"
+			},
+			{
+				"firstName": "Sadie",
+				"lastName": "Knapp",
+				"company": "MALATHION",
+				"email": "sadie.knapp@malathion.com",
+				"age": 32,
+				"isActive": true,
+				"balance": "2354.34",
+				"phone": "+1 (841) 441-3446"
+			},
+			{
+				"firstName": "Frances",
+				"lastName": "Dorsey",
+				"company": "LUMBREX",
+				"email": "frances.dorsey@lumbrex.com",
+				"age": 34,
+				"isActive": false,
+				"balance": "3517.73",
+				"phone": "+1 (843) 572-2692"
+			}
+		]
+	},
+	{
+		"id": "5ae8d1076a2bc982eee199f3",
+		"firstName": "Middleton",
+		"lastName": "Chase",
+		"company": "TROLLERY",
+		"email": "middleton.chase@trollery.com",
+		"age": 21,
+		"isActive": true,
+		"balance": "2140.03",
+		"phone": "+1 (963) 459-3773",
+		"friends": [
+			{
+				"firstName": "Pansy",
+				"lastName": "Ingram",
+				"company": "VISUALIX",
+				"email": "pansy.ingram@visualix.com",
+				"age": 39,
+				"isActive": false,
+				"balance": "2457.32",
+				"phone": "+1 (869) 588-3133"
+			},
+			{
+				"firstName": "Patricia",
+				"lastName": "Dodson",
+				"company": "ELECTONIC",
+				"email": "patricia.dodson@electonic.com",
+				"age": 22,
+				"isActive": true,
+				"balance": "1098.9",
+				"phone": "+1 (873) 527-2761"
+			},
+			{
+				"firstName": "Tammie",
+				"lastName": "Schwartz",
+				"company": "ENVIRE",
+				"email": "tammie.schwartz@envire.com",
+				"age": 33,
+				"isActive": true,
+				"balance": "2852.95",
+				"phone": "+1 (866) 520-2944"
+			}
+		]
+	},
+	{
+		"id": "5ae8d1075b2525559f73eb23",
+		"firstName": "Mays",
+		"lastName": "Pena",
+		"company": "BEZAL",
+		"email": "mays.pena@bezal.com",
+		"age": 28,
+		"isActive": true,
+		"balance": "1299.68",
+		"phone": "+1 (956) 443-2365",
+		"friends": [
+			{
+				"firstName": "Kimberley",
+				"lastName": "Robertson",
+				"company": "MEDCOM",
+				"email": "kimberley.robertson@medcom.com",
+				"age": 24,
+				"isActive": false,
+				"balance": "2323.39",
+				"phone": "+1 (824) 525-2100"
+			},
+			{
+				"firstName": "Bass",
+				"lastName": "Johns",
+				"company": "FLEETMIX",
+				"email": "bass.johns@fleetmix.com",
+				"age": 22,
+				"isActive": true,
+				"balance": "3887.05",
+				"phone": "+1 (807) 423-3851"
+			},
+			{
+				"firstName": "Underwood",
+				"lastName": "Bates",
+				"company": "STUCCO",
+				"email": "underwood.bates@stucco.com",
+				"age": 39,
+				"isActive": true,
+				"balance": "3507.98",
+				"phone": "+1 (943) 490-3579"
+			}
+		]
+	},
+	{
+		"id": "5ae8d1078f0a4f9ce0ab5845",
+		"firstName": "Barber",
+		"lastName": "Craft",
+		"company": "OATFARM",
+		"email": "barber.craft@oatfarm.com",
+		"age": 25,
+		"isActive": true,
+		"balance": "1859.19",
+		"phone": "+1 (912) 410-2833",
+		"friends": [
+			{
+				"firstName": "Battle",
+				"lastName": "Spears",
+				"company": "ETERNIS",
+				"email": "battle.spears@eternis.com",
+				"age": 31,
+				"isActive": true,
+				"balance": "1617.85",
+				"phone": "+1 (884) 514-2448"
+			},
+			{
+				"firstName": "Hess",
+				"lastName": "Padilla",
+				"company": "SURELOGIC",
+				"email": "hess.padilla@surelogic.com",
+				"age": 22,
+				"isActive": false,
+				"balance": "2006.35",
+				"phone": "+1 (951) 412-2591"
+			},
+			{
+				"firstName": "Marquita",
+				"lastName": "Kelly",
+				"company": "FREAKIN",
+				"email": "marquita.kelly@freakin.com",
+				"age": 38,
+				"isActive": true,
+				"balance": "3776.4",
+				"phone": "+1 (935) 446-3467"
+			}
+		]
+	},
+	{
+		"id": "5ae8d10720929ad998ac45bd",
+		"firstName": "Socorro",
+		"lastName": "Rasmussen",
+		"company": "VIRXO",
+		"email": "socorro.rasmussen@virxo.com",
+		"age": 23,
+		"isActive": false,
+		"balance": "2161.94",
+		"phone": "+1 (832) 458-3280",
+		"friends": [
+			{
+				"firstName": "Maldonado",
+				"lastName": "Reyes",
+				"company": "PROSURE",
+				"email": "maldonado.reyes@prosure.com",
+				"age": 28,
+				"isActive": false,
+				"balance": "1421.35",
+				"phone": "+1 (863) 434-3808"
+			},
+			{
+				"firstName": "Mia",
+				"lastName": "Frederick",
+				"company": "ZORROMOP",
+				"email": "mia.frederick@zorromop.com",
+				"age": 22,
+				"isActive": true,
+				"balance": "2551.6",
+				"phone": "+1 (943) 502-3992"
+			},
+			{
+				"firstName": "Nguyen",
+				"lastName": "Henderson",
+				"company": "COMVOY",
+				"email": "nguyen.henderson@comvoy.com",
+				"age": 32,
+				"isActive": false,
+				"balance": "2115.63",
+				"phone": "+1 (931) 413-3862"
+			}
+		]
+	},
+	{
+		"id": "5ae8d10741a64487e0b9accc",
+		"firstName": "Griffith",
+		"lastName": "Warren",
+		"company": "ZEDALIS",
+		"email": "griffith.warren@zedalis.com",
+		"age": 20,
+		"isActive": true,
+		"balance": "2784.45",
+		"phone": "+1 (918) 566-2298",
+		"friends": [
+			{
+				"firstName": "Maricela",
+				"lastName": "Garner",
+				"company": "PRISMATIC",
+				"email": "maricela.garner@prismatic.com",
+				"age": 40,
+				"isActive": true,
+				"balance": "3677.75",
+				"phone": "+1 (819) 481-2251"
+			},
+			{
+				"firstName": "Burt",
+				"lastName": "Mayer",
+				"company": "EQUITAX",
+				"email": "burt.mayer@equitax.com",
+				"age": 24,
+				"isActive": true,
+				"balance": "3486.61",
+				"phone": "+1 (856) 513-2781"
+			},
+			{
+				"firstName": "Gregory",
+				"lastName": "Bullock",
+				"company": "SOFTMICRO",
+				"email": "gregory.bullock@softmicro.com",
+				"age": 22,
+				"isActive": true,
+				"balance": "2098.86",
+				"phone": "+1 (861) 480-3932"
+			}
+		]
+	}
+]
