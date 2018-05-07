@@ -1,13 +1,36 @@
 package com.blog.soat.graphql.model;
 
-import org.springframework.data.annotation.Id;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import java.util.List;
+import java.util.Set;
 
+@Getter
+@Setter
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
 public class Person {
 
 	@Id
-	private String id;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "ID")
+	private Integer id;
+
 	private String firstName;
 	private String lastName;
 	private String company;
@@ -16,94 +39,13 @@ public class Person {
 	private Boolean isActive;
 	private String balance;
 	private String phone;
-	private String address;
-	private List<Person> friends;
 
-	public String getId() {
-		return id;
-	}
-
-	public void setId(String id) {
-		this.id = id;
-	}
-
-	public String getFirstName() {
-		return firstName;
-	}
-
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-
-	public String getLastName() {
-		return lastName;
-	}
-
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
-
-	public String getCompany() {
-		return company;
-	}
-
-	public void setCompany(String company) {
-		this.company = company;
-	}
-
-	public String getEmail() {
-		return email;
-	}
-
-	public void setEmail(String email) {
-		this.email = email;
-	}
-
-	public Integer getAge() {
-		return age;
-	}
-
-	public void setAge(Integer age) {
-		this.age = age;
-	}
-
-	public Boolean getActive() {
-		return isActive;
-	}
-
-	public void setActive(Boolean active) {
-		isActive = active;
-	}
-
-	public String getBalance() {
-		return balance;
-	}
-
-	public void setBalance(String balance) {
-		this.balance = balance;
-	}
-
-	public String getPhone() {
-		return phone;
-	}
-
-	public void setPhone(String phone) {
-		this.phone = phone;
-	}
-
-	public String getAddress() {
-		return address;
-	}
-
-	public void setAddress(String address) {
-		this.address = address;
-	}
-
-	public List<Person> getFriends() {
-		return friends;
-	}
-
-	public void setFriends(List<Person> friends) {
-		this.friends = friends;
-	}
+	@ManyToMany
+	@JoinTable(
+			name = "FRIENDS",
+			joinColumns = @JoinColumn(name = "PERSON_ID", referencedColumnName = "ID"),
+			inverseJoinColumns = @JoinColumn(name = "FRIEND_ID", referencedColumnName = "ID")
+	)
+	private Set<Person> friends;
 }
+
