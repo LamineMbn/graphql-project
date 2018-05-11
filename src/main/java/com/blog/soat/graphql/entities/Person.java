@@ -1,4 +1,4 @@
-package com.blog.soat.graphql.model;
+package com.blog.soat.graphql.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -12,11 +12,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
-import javax.persistence.OneToMany;
-import java.util.List;
-import java.util.Set;
+import javax.persistence.ManyToOne;
 
 @Getter
 @Setter
@@ -28,24 +24,32 @@ public class Person {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "ID")
-	private Integer id;
+	@Column(name = "person_id")
+	private Long personId;
 
+	@Column(name = "first_name")
 	private String firstName;
+
+	@Column(name = "last_name")
 	private String lastName;
+
+	@Column(name = "company")
 	private String company;
+
+	@Column(name = "email")
 	private String email;
+
+	@Column(name = "age")
 	private Integer age;
-	private Boolean isActive;
-	private String balance;
+
+	@Column(name = "is_active")
+	private Boolean active;
+
+	@Column(name = "phone")
 	private String phone;
 
-	@ManyToMany
-	@JoinTable(
-			name = "FRIENDS",
-			joinColumns = @JoinColumn(name = "PERSON_ID", referencedColumnName = "ID"),
-			inverseJoinColumns = @JoinColumn(name = "FRIEND_ID", referencedColumnName = "ID")
-	)
-	private Set<Person> friends;
+	@ManyToOne
+    @JoinColumn(name = "mission_id")
+	private Mission mission;
 }
 

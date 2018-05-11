@@ -1,0 +1,21 @@
+type Mission {
+    missionId: ID!
+    title: String
+}
+
+type Person {
+    personId: ID!
+	firstName: String
+	lastName: String
+	company: String
+	email: String
+	age: Int
+	active: Boolean
+	phone: String
+	mission: Mission
+}
+
+type Query {
+    findAllSoatien: [Person]!
+    findAllMissions: [Mission]!
+}
