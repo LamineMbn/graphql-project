@@ -25,16 +25,16 @@ public class GraphqlProjectApplication implements CommandLineRunner {
     @Override
     public void run(String... args) {
 
-        personRepository.deleteAll();
-        missionRepository.deleteAll();
-
-        Mission missionAccor = Mission.builder().title("Mission Accor").build();
-        Mission missionSG = Mission.builder().title("Mission SG").build();
-        missionRepository.save(missionAccor);
-        missionRepository.save(missionSG);
-
-        personRepository.save(Person.builder().firstName("Lamine").lastName("Le loup").active(false).mission(missionAccor).build());
-        personRepository.save(Person.builder().firstName("Toto").lastName("Tata").active(true).build());
+//        personRepository.deleteAll();
+//        missionRepository.deleteAll();
+//
+//        Mission missionAccor = Mission.builder().title("Mission Accor").build();
+//        Mission missionSG = Mission.builder().title("Mission SG").build();
+//        missionRepository.save(missionAccor);
+//        missionRepository.save(missionSG);
+//
+//        personRepository.save(Person.builder().firstName("Lamine").lastName("Le loup").active(false).mission(missionAccor).build());
+//        personRepository.save(Person.builder().firstName("Toto").lastName("Tata").active(true).build());
 
 //		List<Person> personList = personRepository.findAll()findAll();
 //

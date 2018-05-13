@@ -1,18 +1,24 @@
+type Client {
+    name: String
+    missions: [Mission]
+}
+
 type Mission {
-    missionId: ID!
     title: String
+    client: Client
 }
 
 type Person {
-    personId: ID!
-	firstName: String
-	lastName: String
-	company: String
-	email: String
-	age: Int
-	active: Boolean
-	phone: String
-	mission: Mission
+    # Soatien first name
+    firstName: String
+    # Soatien last name
+    lastName: String
+    company: String
+    email: String
+    age: Int
+    active: Boolean
+    phone: String
+    mission: Mission
 }
 
 type Query {
