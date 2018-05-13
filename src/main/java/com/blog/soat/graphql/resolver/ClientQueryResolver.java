@@ -6,9 +6,6 @@ import com.blog.soat.graphql.repository.MissionRepository;
 import com.coxautodev.graphql.tools.GraphQLResolver;
 import org.springframework.stereotype.Component;
 
-import java.util.Collections;
-import java.util.Set;
-
 @Component
 public class ClientQueryResolver implements GraphQLResolver<Client> {
 
@@ -18,7 +15,7 @@ public class ClientQueryResolver implements GraphQLResolver<Client> {
 		this.missionRepository = missionRepository;
 	}
 
-	public Iterable<Mission> getMissions(Client client){
+	public Iterable<Mission> getMissions(Client client) {
 		return this.missionRepository.findAllByClientClientId(client.getClientId());
 	}
 }

@@ -10,20 +10,20 @@ import org.springframework.stereotype.Component;
 @Component
 public class Query implements GraphQLQueryResolver {
 
-    private PersonRepository personRepository;
-    private MissionRepository missionRepository;
+	private PersonRepository personRepository;
+	private MissionRepository missionRepository;
 
-    public Query(PersonRepository personRepository, MissionRepository missionRepository) {
-        this.personRepository = personRepository;
-        this.missionRepository = missionRepository;
-    }
+	public Query(PersonRepository personRepository, MissionRepository missionRepository) {
+		this.personRepository = personRepository;
+		this.missionRepository = missionRepository;
+	}
 
-    public Iterable<Person> findAllSoatien() {
-        return personRepository.findAll();
-    }
+	public Iterable<Person> findAllSoatien() {
+		return personRepository.findAll();
+	}
 
-    public Iterable<Mission> findAllMissions() {
-        return missionRepository.findAll();
-    }
+	public Iterable<Mission> findAllMissions() {
+		return missionRepository.findAll();
+	}
 
 }
