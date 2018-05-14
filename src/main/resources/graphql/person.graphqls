@@ -1,13 +1,3 @@
-type Client {
-    name: String
-    missions: [Mission]
-}
-
-type Mission {
-    title: String
-    client: Client
-}
-
 type Person {
     # Soatien first name
     firstName: String
@@ -23,5 +13,4 @@ type Person {
 
 type Query {
     findAllSoatien: [Person]!
-    findAllMissions: [Mission]!
 }

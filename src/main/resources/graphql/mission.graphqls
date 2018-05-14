@@ -1,0 +1,8 @@
+type Mission {
+    title: String
+    client: Client
+}
+
+extend type Query {
+    findAllMissions: [Mission]!
+}
