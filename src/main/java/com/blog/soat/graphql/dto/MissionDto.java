@@ -8,9 +8,9 @@ import lombok.Setter;
 
 @Getter
 @Setter
-@Builder
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class MissionDto {
 
 	private String title;
@@ -19,5 +19,6 @@ public class MissionDto {
 	//
 	//	private List<String> tags;
 
-	private ClientDto client;
+	//	private ClientDto client;
+
 }

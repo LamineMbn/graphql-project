@@ -10,9 +10,9 @@ import java.util.Set;
 
 @Getter
 @Setter
-@Builder
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class ClientDto {
 
 	private Long clientId;
